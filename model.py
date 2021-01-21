@@ -23,6 +23,9 @@ import tensorflow as tf
 from attention_decoder import attention_decoder
 from tensorflow.contrib.tensorboard.plugins import projector
 
+# Logan: set only GPU cuda_device 6 to be available
+os.environ["CUDA_VISIBLE_DEVICES"]="6"
+
 FLAGS = tf.app.flags.FLAGS
 
 class SummarizationModel(object):
